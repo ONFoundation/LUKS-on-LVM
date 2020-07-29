@@ -2,6 +2,7 @@
   become: yes
   filesystem:
     fstype: btrfs
+    force: yes
     dev: '/dev/{{vg_name}}/{{lv_name}}{{ i }}'
     opts: '-L {{lv_name}}{{ i }}'
   loop: '{{disk}}'
