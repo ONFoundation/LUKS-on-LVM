@@ -1,6 +1,14 @@
-- name: create LUKS container
-  become: yes
+- name: create and open the LUKS container; name it
   luks_device:
     device: "/dev/{{vg_name}}/{{lv_name}}"
-    state: "present"
+    state: "opened"
+    name: "{{vg_name}}-{{lv_name}}"
     keyfile: "/vault/keyfile"
+
+
+# - name: create LUKS container
+#   become: yes
+#   luks_device:
+#     device: "/dev/{{vg_name}}/{{lv_name}}"
+#     state: "present"
+#     keyfile: "/vault/keyfile"
