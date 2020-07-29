@@ -1,0 +1,10 @@
+disk:
+- 'ata-Hitachi_HDE721010SLA330_STR607MS2GG8ZS'
+- 'ata-Hitachi_HDE721010SLA330_STR607MS2GMXKS'
+
+path: '/dev/disk/by-id/'
+
+
+vg_name: 'storcrypt'
+
+thinpool: 'thin'

@@ -1,0 +1,7 @@
+Quote:
+''
+Hi,
+
+personally, I have not chosen mdadm for my new NAS I built. I have snapraid which does my parity and also do filechecks for me, to detect corrupt files. But I do use dm-crypt for encrypting all data drives. The drives are mounted unencrypted and pooled with mergerfs. So I can use any drive in any size, encrypt all my data and use all data in plaintext from one big drive.
+''
+https://www.reddit.com/r/DataHoarder/comments/9cycms/dmintegrity_dmcrypt_mdadm/

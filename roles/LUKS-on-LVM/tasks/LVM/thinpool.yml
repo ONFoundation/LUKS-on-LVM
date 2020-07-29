@@ -1,0 +1,6 @@
+- name: Create a thin pool
+  become: yes
+  lvol:
+    vg: '{{vg_name}}'
+    thinpool: '{{thinpool}}'
+    size: 100%FREE

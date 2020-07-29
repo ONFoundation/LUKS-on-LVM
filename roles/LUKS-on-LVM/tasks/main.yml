@@ -1,2 +1,5 @@
-- name: vg
-  import_tasks: vg.yml
+- import_tasks: pkg/pre.yml
+
+- import_tasks: LVM/lvm.yml
+
+- import_tasks: LUKS/LUKS.yml

@@ -1,0 +1,5 @@
+- name: Create a volume group
+  become: yes
+  lvg:
+    vg: '{{vg_name}}'
+    pvs: '{{path}}{{disk[0]}},{{path}}{{disk[1]}}'

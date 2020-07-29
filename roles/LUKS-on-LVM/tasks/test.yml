@@ -1,0 +1,8 @@
+- debug:
+    msg: "on {{ disk[0] }} and {{ disk[1] }}"
+
+- name: Ansible array variables example
+  debug: 
+    msg: "{{ item }}"
+  with_items:
+    - "{{ disk }}"

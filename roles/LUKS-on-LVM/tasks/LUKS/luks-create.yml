@@ -1,0 +1,6 @@
+- name: create LUKS container
+  become: yes
+  luks_device:
+    device: "/dev/{{vg_name}}/{{lv_name}}"
+    state: "present"
+    keyfile: "/vault/keyfile"

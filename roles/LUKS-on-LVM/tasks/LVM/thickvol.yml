@@ -1,0 +1,7 @@
+- name: Create a logical volume the size of all remaining space
+  become: yes
+  lvol:
+    vg: '{{vg_name}}'
+    lv: '{{lv_name}}'
+    size: 100%FREE
+    shrink: no  # makes Idempotent!

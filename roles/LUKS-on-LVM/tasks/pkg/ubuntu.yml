@@ -1,0 +1,10 @@
+- name: install cryptsetup
+  become: yes
+  apt:
+    update_cache: yes
+    pkg:
+    - btrfs-progs
+    - cryptsetup
+    - lvm2
+    - thin-provisioning-tools
+

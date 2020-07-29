@@ -1,0 +1,11 @@
+- import_tasks: thinpool.yml
+
+- name: Create a thin volume of 128g
+  become: yes
+  lvol:
+    vg: '{{vg_name}}'
+    lv: test
+    thinpool: '{{thinpool}}'
+    size: 1t
+    shrink: no  # makes Idempotent!
+ 

@@ -1,0 +1,6 @@
+
+- name: Copy keyfile
+  become: yes
+  copy:
+    src: keyfile
+    dest: /vault/
