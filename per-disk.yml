@@ -1,0 +1,4 @@
+---
+- hosts: stor
+  roles:
+    - One-per-Disk
