@@ -1,0 +1,8 @@
+- name: Test - Create on single disk[0]
+  become: yes
+  lvol:
+    vg: '{{vg_name}}'
+    lv: '{{lv_name}}0'
+    size: 100%FREE
+    shrink: no  # makes Idempotent!
+    pvs: '{{path}}{{disk[0]}}'

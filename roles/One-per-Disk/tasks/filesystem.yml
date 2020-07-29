@@ -1,0 +1,9 @@
+- name: Create a filesystem on each
+  become: yes
+  filesystem:
+    fstype: btrfs
+    dev: '/dev/{{vg_name}}/{{lv_name}}{{ i }}'
+    opts: '-L {{lv_name}}{{ i }}'
+  loop: '{{disk}}'
+  loop_control:
+    index_var: i
