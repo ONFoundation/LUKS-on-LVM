@@ -1,8 +1,4 @@
-- name: completely remove the LUKS container and its contents
-  become: yes
-  luks_device:
-    device: "/dev/{{vg_name}}/{{lv_name}}"
-    state: "absent"
+# - import_tasks: luks.yml
 
 - name: Remove the logical volume.
   become: yes

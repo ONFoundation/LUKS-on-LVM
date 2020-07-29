@@ -1,0 +1,22 @@
+# - name: Create on single disk[0]
+#   become: yes
+#   lvol:
+#     vg: '{{vg_name}}'
+#     lv: '{{lv_name}}0'
+#     size: 100%FREE
+#     shrink: no  # makes Idempotent!
+#     pvs: '{{path}}{{disk[0]}}'
+
+- name: Create one per disk[]!
+  become: yes
+  lvol:
+    vg: '{{vg_name}}'
+    lv: '{{lv_name}}{{ i }}'
+    size: 100%FREE
+    shrink: no  # makes Idempotent!
+    pvs: '{{path}}{{ item }}'
+  loop: '{{disk}}'
+  loop_control:
+    index_var: i
+
+# https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html#tracking-progress-through-a-loop-with-index-var
