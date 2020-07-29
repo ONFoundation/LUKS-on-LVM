@@ -1,5 +1,5 @@
 path: '/dev/disk/by-id/'
 
-vg_name: 'storcrypt'
+vg_name: 'stor'
 
 thinpool: 'thin'
