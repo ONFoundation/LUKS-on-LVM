@@ -1,0 +1,10 @@
+- name: open LUKS container
+  become: yes
+  luks_device:
+    device: "/dev/{{vg_name}}/{{lv_name}}"
+    state: "opened"
+    keyfile: "/vault/keyfile"
+  register: name
+
+- debug:
+    var: name
