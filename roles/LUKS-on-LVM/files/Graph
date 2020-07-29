@@ -1,0 +1,4 @@
+https://askubuntu.com/questions/13317/how-to-stop-gedit-gvim-vim-nano-from-adding-end-of-file-newline-char
+
+Solution:
+nano --nonewlines default-keyfile
