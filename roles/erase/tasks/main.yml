@@ -3,3 +3,18 @@
   luks_device:
     device: "/dev/{{vg_name}}/{{lv_name}}"
     state: "absent"
+
+- name: Remove the logical volume.
+  become: yes
+  lvol:
+    vg: "{{vg_name}}"
+    lv: "{{lv_name}}"
+    state: absent
+    force: yes
+
+- name: Remove a volume group with name vg.services
+  become: yes
+  lvg:
+    vg: "{{vg_name}}"
+    state: absent
+    force: yes

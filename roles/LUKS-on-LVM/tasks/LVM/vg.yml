@@ -2,4 +2,4 @@
   become: yes
   lvg:
     vg: '{{vg_name}}'
-    pvs: '{{path}}{{disk[0]}},{{path}}{{disk[1]}}'
+    pvs: '{{path}}{{disk[0]}},{{path}}{{disk[1]}},{{path}}{{disk[2]}}'
